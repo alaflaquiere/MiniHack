@@ -126,7 +126,7 @@ extras_deps["all"] = [item for group in extras_deps.values() for item in group]
 
 
 if __name__ == "__main__":
-    package_name = os.getenv("NLE_PACKAGE_NAME", "minihack")
+    package_name = os.getenv("NLE_PACKAGE_NAME", "nle")
     cwd = os.path.dirname(os.path.abspath(__file__))
     version = open("version.txt", "r").read().strip()
     sha = "Unknown"

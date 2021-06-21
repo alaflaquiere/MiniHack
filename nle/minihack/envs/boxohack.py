@@ -6,7 +6,7 @@ import numpy as np
 import pkg_resources
 from nle import nethack
 from gym.envs import registration
-from nle.minihack import LevelGenerator, MiniHackNavigation
+from minihack import LevelGenerator, MiniHackNavigation
 
 LEVELS_PATH = os.path.join(
     pkg_resources.resource_filename("nle", "minihack/dat"), "boxoban-levels-master"
@@ -122,7 +122,8 @@ class MiniHackBoxobanUnfiltered(BoxoHack):
     def __init__(self, *args, **kwargs):
         kwargs["level_set"] = "unfiltered"
         kwargs["level_mode"] = "train"
-        kwargs["reward_shaping_coefficient"] = 0
+        kwargs["reward_shaping_coefficient"] = 0.1
+        kwargs["penalty_time"] = -0.001
         super().__init__(*args, **kwargs)
 
 
@@ -130,37 +131,12 @@ class MiniHackBoxobanMedium(BoxoHack):
     def __init__(self, *args, **kwargs):
         kwargs["level_set"] = "medium"
         kwargs["level_mode"] = "train"
-        kwargs["reward_shaping_coefficient"] = 0
+        kwargs["reward_shaping_coefficient"] = 0.1
+        kwargs["penalty_time"] = -0.001
         super().__init__(*args, **kwargs)
 
 
 class MiniHackBoxobanHard(BoxoHack):
-    def __init__(self, *args, **kwargs):
-        kwargs["level_set"] = "hard"
-        kwargs["level_mode"] = ""
-        kwargs["reward_shaping_coefficient"] = 0
-        super().__init__(*args, **kwargs)
-
-
-class MiniHackBoxobanUnfilteredShaped(BoxoHack):
-    def __init__(self, *args, **kwargs):
-        kwargs["level_set"] = "unfiltered"
-        kwargs["level_mode"] = "train"
-        kwargs["reward_shaping_coefficient"] = 0.1
-        kwargs["penalty_time"] = -0.001
-        super().__init__(*args, **kwargs)
-
-
-class MiniHackBoxobanMediumShaped(BoxoHack):
-    def __init__(self, *args, **kwargs):
-        kwargs["level_set"] = "medium"
-        kwargs["level_mode"] = "train"
-        kwargs["reward_shaping_coefficient"] = 0.1
-        kwargs["penalty_time"] = -0.001
-        super().__init__(*args, **kwargs)
-
-
-class MiniHackBoxobanHardShaped(BoxoHack):
     def __init__(self, *args, **kwargs):
         kwargs["level_set"] = "hard"
         kwargs["level_mode"] = ""
@@ -171,25 +147,13 @@ class MiniHackBoxobanHardShaped(BoxoHack):
 
 registration.register(
     id="MiniHack-Boxoban-Unfiltered-v0",
-    entry_point="nle.minihack.envs.boxohack:MiniHackBoxobanUnfiltered",
+    entry_point="minihack.envs.boxohack:MiniHackBoxobanUnfiltered",
 )
 registration.register(
     id="MiniHack-Boxoban-Medium-v0",
-    entry_point="nle.minihack.envs.boxohack:MiniHackBoxobanMedium",
+    entry_point="minihack.envs.boxohack:MiniHackBoxobanMedium",
 )
 registration.register(
     id="MiniHack-Boxoban-Hard-v0",
-    entry_point="nle.minihack.envs.boxohack:MiniHackBoxobanHard",
-)
-registration.register(
-    id="MiniHack-Boxoban-Unfiltered-Shaped-v0",
-    entry_point="nle.minihack.envs.boxohack:MiniHackBoxobanUnfilteredShaped",
-)
-registration.register(
-    id="MiniHack-Boxoban-Medium-Shaped-v0",
-    entry_point="nle.minihack.envs.boxohack:MiniHackBoxobanMediumShaped",
-)
-registration.register(
-    id="MiniHack-Boxoban-Hard-Shaped-v0",
-    entry_point="nle.minihack.envs.boxohack:MiniHackBoxobanHardShaped",
+    entry_point="minihack.envs.boxohack:MiniHackBoxobanHard",
 )

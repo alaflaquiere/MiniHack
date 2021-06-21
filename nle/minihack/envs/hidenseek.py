@@ -1,4 +1,5 @@
-from nle.minihack import MiniHackNavigation
+# Copyright (c) Facebook, Inc. and its affiliates.
+from minihack import MiniHackNavigation
 from gym.envs import registration
 
 
@@ -27,18 +28,18 @@ class MiniHackHideAndSeekBig(MiniHackNavigation):
 
 
 registration.register(
-    id="MiniHack-HideSeek-Mapped-v0",
-    entry_point="nle.minihack.envs.hidenseek:MiniHackHideAndSeekMapped",
+    id="MiniHack-HideNSeek-Mapped-v0",
+    entry_point="minihack.envs.hidenseek:MiniHackHideAndSeekMapped",
 )
 registration.register(
-    id="MiniHack-HideSeek-v0",
-    entry_point="nle.minihack.envs.hidenseek:MiniHackHideAndSeek",
+    id="MiniHack-HideNSeek-v0",
+    entry_point="minihack.envs.hidenseek:MiniHackHideAndSeek",
 )
 registration.register(
-    id="MiniHack-HideSeek-Lava-v0",
-    entry_point="nle.minihack.envs.hidenseek:MiniHackHideAndSeekLava",
+    id="MiniHack-HideNSeek-Lava-v0",
+    entry_point="minihack.envs.hidenseek:MiniHackHideAndSeekLava",
 )
 registration.register(
-    id="MiniHack-HideSeek-Big-v0",
-    entry_point="nle.minihack.envs.hidenseek:MiniHackHideAndSeekBig",
+    id="MiniHack-HideNSeek-Big-v0",
+    entry_point="minihack.envs.hidenseek:MiniHackHideAndSeekBig",
 )

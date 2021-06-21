@@ -1,4 +1,5 @@
-from nle.minihack import MiniHackNavigation, LevelGenerator
+# Copyright (c) Facebook, Inc. and its affiliates.
+from minihack import MiniHackNavigation, LevelGenerator
 from nle.nethack import Command, CompassDirection
 from gym.envs import registration
 import gym
@@ -126,16 +127,16 @@ class MiniHackMultiRoomN6(MiniGridHack):
 
 
 registration.register(
-    id="MiniHack-MultiRoom-N2-S4-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN2",
+    id="MiniHack-MultiRoom-N2-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN2",
 )
 registration.register(
-    id="MiniHack-MultiRoom-N4-S5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN4",
+    id="MiniHack-MultiRoom-N4-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN4",
 )
 registration.register(
     id="MiniHack-MultiRoom-N6-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN6",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN6",
 )
 
 
@@ -162,16 +163,16 @@ class MiniHackMultiRoomN6Locked(MiniGridHack):
 
 
 registration.register(
-    id="MiniHack-LockedMultiRoom-N2-S4-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN2Locked",
+    id="MiniHack-LockedMultiRoom-N2-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN2Locked",
 )
 registration.register(
-    id="MiniHack-LockedMultiRoom-N4-S5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN4Locked",
+    id="MiniHack-LockedMultiRoom-N4-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN4Locked",
 )
 registration.register(
     id="MiniHack-LockedMultiRoom-N6-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN6Locked",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN6Locked",
 )
 
 
@@ -198,16 +199,16 @@ class MiniHackMultiRoomN6Lava(MiniGridHack):
 
 
 registration.register(
-    id="MiniHack-LavaMultiRoom-N2-S4-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN2Lava",
+    id="MiniHack-LavaMultiRoom-N2-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN2Lava",
 )
 registration.register(
-    id="MiniHack-LavaMultiRoom-N4-S5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN4Lava",
+    id="MiniHack-LavaMultiRoom-N4-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN4Lava",
 )
 registration.register(
     id="MiniHack-LavaMultiRoom-N6-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN6Lava",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN6Lava",
 )
 
 
@@ -235,16 +236,16 @@ class MiniHackMultiRoomN6Monster(MiniGridHack):
 
 # MiniGrid: MonsterMultiRoom
 registration.register(
-    id="MiniHack-MonsterMultiRoom-N2-S4-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN2Monster",
+    id="MiniHack-MonsterMultiRoom-N2-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN2Monster",
 )
 registration.register(
-    id="MiniHack-MonsterMultiRoom-N4-S5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN4Monster",
+    id="MiniHack-MonsterMultiRoom-N4-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN4Monster",
 )
 registration.register(
     id="MiniHack-MonsterMultiRoom-N6-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN6Monster",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN6Monster",
 )
 
 
@@ -277,58 +278,58 @@ class MiniHackMultiRoomN6Extreme(MiniGridHack):
 
 
 registration.register(
-    id="MiniHack-ExtremeMultiRoom-N2-S4-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN2Extreme",
+    id="MiniHack-ExtremeMultiRoom-N2-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN2Extreme",
 )
 registration.register(
-    id="MiniHack-ExtremeMultiRoom-N4-S5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN4Extreme",
+    id="MiniHack-ExtremeMultiRoom-N4-v0",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN4Extreme",
 )
 registration.register(
     id="MiniHack-ExtremeMultiRoom-N6-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniHackMultiRoomN6Extreme",
+    entry_point="minihack.envs.minigrid:MiniHackMultiRoomN6Extreme",
 )
 
 # MiniGrid: LavaCrossing
 registration.register(
     id="MiniHack-LavaCrossingS9N1-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-LavaCrossingS9N1-v0"},
 )
 registration.register(
     id="MiniHack-LavaCrossingS9N2-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-LavaCrossingS9N2-v0"},
 )
 registration.register(
     id="MiniHack-LavaCrossingS9N3-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-LavaCrossingS9N3-v0"},
 )
 registration.register(
     id="MiniHack-LavaCrossingS11N5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-LavaCrossingS11N5-v0"},
 )
 
 # MiniGrid: Simple Crossing
 registration.register(
     id="MiniHack-SimpleCrossingS9N1-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-SimpleCrossingS9N1-v0"},
 )
 registration.register(
     id="MiniHack-SimpleCrossingS9N2-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-SimpleCrossingS9N2-v0"},
 )
 registration.register(
     id="MiniHack-SimpleCrossingS9N3-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-SimpleCrossingS9N3-v0"},
 )
 registration.register(
     id="MiniHack-SimpleCrossingS11N5-v0",
-    entry_point="nle.minihack.envs.minigrid:MiniGridHack",
+    entry_point="minihack.envs.minigrid:MiniGridHack",
     kwargs={"env_name": "MiniGrid-SimpleCrossingS11N5-v0"},
 )

@@ -1,4 +1,5 @@
-from nle.minihack import MiniHackNavigation
+# Copyright (c) Facebook, Inc. and its affiliates.
+from minihack import MiniHackNavigation
 from gym.envs import registration
 from nle.nethack import Command
 from nle import nethack
@@ -37,33 +38,15 @@ class MiniHackCorridor5(MiniHackCorridor):
         super().__init__(*args, des_file="corridor5.des", **kwargs)
 
 
-class MiniHackCorridor8(MiniHackCorridor):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, des_file="corridor8.des", **kwargs)
-
-
-class MiniHackCorridor10(MiniHackCorridor):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, des_file="corridor10.des", **kwargs)
-
-
 registration.register(
     id="MiniHack-Corridor-R2-v0",
-    entry_point="nle.minihack.envs.corridor:MiniHackCorridor2",
+    entry_point="minihack.envs.corridor:MiniHackCorridor2",
 )
 registration.register(
     id="MiniHack-Corridor-R3-v0",
-    entry_point="nle.minihack.envs.corridor:MiniHackCorridor3",
+    entry_point="minihack.envs.corridor:MiniHackCorridor3",
 )
 registration.register(
     id="MiniHack-Corridor-R5-v0",
-    entry_point="nle.minihack.envs.corridor:MiniHackCorridor5",
-)
-registration.register(
-    id="MiniHack-Corridor-R8-v0",
-    entry_point="nle.minihack.envs.corridor:MiniHackCorridor8",
-)
-registration.register(
-    id="MiniHack-Corridor-R10-v0",
-    entry_point="nle.minihack.envs.corridor:MiniHackCorridor10",
+    entry_point="minihack.envs.corridor:MiniHackCorridor5",
 )

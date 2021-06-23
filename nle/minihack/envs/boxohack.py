@@ -6,7 +6,7 @@ import numpy as np
 import pkg_resources
 from nle import nethack
 from gym.envs import registration
-from minihack import LevelGenerator, MiniHackNavigation
+from nle.minihack import LevelGenerator, MiniHackNavigation
 
 LEVELS_PATH = os.path.join(
     pkg_resources.resource_filename("nle", "minihack/dat"), "boxoban-levels-master"

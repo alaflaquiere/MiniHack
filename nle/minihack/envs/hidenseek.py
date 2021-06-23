@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from minihack import MiniHackNavigation
+from nle.minihack import MiniHackNavigation
 from gym.envs import registration
 
 

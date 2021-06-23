@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from minihack import MiniHackNavigation, LevelGenerator
+from nle.minihack import MiniHackNavigation, LevelGenerator
 from nle.nethack import Command, CompassDirection
 from gym.envs import registration
 import gym

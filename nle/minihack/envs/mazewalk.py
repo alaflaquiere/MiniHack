@@ -1,6 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-from minihack import MiniHackNavigation
-from minihack.level_generator import LevelGenerator
+from nle.minihack import MiniHackNavigation
+from nle.minihack.level_generator import LevelGenerator
 from gym.envs import registration
 
 DUNGEON_SHAPE = (76, 21)

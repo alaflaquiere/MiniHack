@@ -40,13 +40,13 @@ class MiniHackCorridor5(MiniHackCorridor):
 
 registration.register(
     id="MiniHack-Corridor-R2-v0",
-    entry_point="minihack.envs.corridor:MiniHackCorridor2",
+    entry_point="nle.minihack.envs.corridor:MiniHackCorridor2",
 )
 registration.register(
     id="MiniHack-Corridor-R3-v0",
-    entry_point="minihack.envs.corridor:MiniHackCorridor3",
+    entry_point="nle.minihack.envs.corridor:MiniHackCorridor3",
 )
 registration.register(
     id="MiniHack-Corridor-R5-v0",
-    entry_point="minihack.envs.corridor:MiniHackCorridor5",
+    entry_point="nle.minihack.envs.corridor:MiniHackCorridor5",
 )

@@ -14,6 +14,7 @@ recursive-include third_party *
 recursive-include nle/minihack/dat *
 recursive-include nle/minihack/lib *
 recursive-include nle/minihack/scripts *
+recursive-include nle/tiles *
 
 recursive-exclude build *
 exclude nle/dashboard
